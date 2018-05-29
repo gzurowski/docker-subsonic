@@ -1,6 +1,6 @@
 FROM alpine:3.7
 
-MAINTAINER Gregor Zurowski "gregor@zurowski.org"
+LABEL maintainer="gregor@zurowski.org"
 
 ENV SUBSONIC_VERSION=6.1.3
 ENV SUBSONIC_BIN=/opt/subsonic
