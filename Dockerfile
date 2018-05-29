@@ -13,13 +13,11 @@ ADD https://s3-eu-west-1.amazonaws.com/subsonic-public/download/subsonic-${SUBSO
 RUN apk --update add --no-cache openjdk8-jre ffmpeg lame && \
     rm -rf /var/cache/apk/*
 
-# Set up user and Subsonic binaries
-RUN mkdir -p ${SUBSONIC_BIN} && \
+# Set up Subsonic binaries
+RUN mkdir -p ${SUBSONIC_HOME} && \
+    mkdir -p ${SUBSONIC_BIN} && \
     tar zxvf /tmp/subsonic.tar.gz -C ${SUBSONIC_BIN} && \
     rm -rf /tmp/*
-
-# Create data directory
-RUN mkdir ${SUBSONIC_HOME}
 
 # Modify startup script
 ## Don't redirect logs and don't fork main process
