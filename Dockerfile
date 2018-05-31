@@ -10,7 +10,7 @@ ENV SUBSONIC_HOME=/var/subsonic
 ADD https://s3-eu-west-1.amazonaws.com/subsonic-public/download/subsonic-${SUBSONIC_VERSION}-standalone.tar.gz /tmp/subsonic.tar.gz
 
 # Install Java and audio tools
-RUN apk --update add --no-cache openjdk8-jre ffmpeg lame && \
+RUN apk --update add --no-cache openjdk8-jre-base ffmpeg lame && \
     rm -rf /var/cache/apk/*
 
 # Set up Subsonic binaries
