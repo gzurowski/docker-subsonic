@@ -24,7 +24,7 @@ RUN mkdir -p ${SUBSONIC_HOME} && \
 RUN sed -i "s/ > \${LOG} 2>&1 &//" ${SUBSONIC_BIN}/subsonic.sh
 ## Create symlinks for transcoding tools (because Subsonic has hard-coded paths for these)
 RUN sed -i '/# Create Subsonic home directory./i \
-mkdir -p ${SUBSONIC_BIN}/transcode && ln -fs /usr/bin/ffmpeg /usr/bin/lame ${SUBSONIC_BIN}/transcode\n' ${SUBSONIC_BIN}/subsonic.sh
+mkdir -p ${SUBSONIC_HOME}/transcode && ln -fs /usr/bin/ffmpeg /usr/bin/lame ${SUBSONIC_HOME}/transcode\n' ${SUBSONIC_BIN}/subsonic.sh
 
 VOLUME ${SUBSONIC_HOME}
 VOLUME /var/music
