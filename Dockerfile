@@ -2,7 +2,7 @@ FROM alpine:3.7
 
 LABEL maintainer="gregor@zurowski.org"
 
-ENV SUBSONIC_VERSION=6.1.3
+ENV SUBSONIC_VERSION=6.1.5
 ENV SUBSONIC_BIN=/opt/subsonic
 ENV SUBSONIC_HOME=/var/subsonic
 
