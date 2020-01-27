@@ -10,7 +10,7 @@ The following table provides an overview of the software components used in this
 | --- | --- | ---
 | Alpine Linux | 3.7.x | Linux Kernel 4.9.x |
 | OpenJDK JRE | 1.8.0_x | |
-| Subsonic | 6.1.3 | Standalone version running on Jetty |
+| Subsonic | 6.1.6 | Standalone version running on Jetty |
 | LAME | 3.100 | |
 | ffmpeg | 3.4 | |
 
